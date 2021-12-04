@@ -1,7 +1,7 @@
 // Significantly coded live along with Nathan during group homework help session
 var myMap = L.map("map", {
-    center : [40.7128, -74.0059],
-    zoom: 4
+    center : [61.2180556, -149.9002778],
+    zoom:6
 })
 
 L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
@@ -15,12 +15,12 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 function getColor(depth){
     switch(true){
-        case depth > 90: return "black";
-        case depth > 70: return "blue";
-        case depth > 50: return "purple";
-        case depth > 30: return "red";
-        case depth > 10: return "pink";
-        default: return "white";
+        case depth > 90: return "#4d0000";
+        case depth > 70: return "#800000";
+        case depth > 50: return "#b30000";
+        case depth > 30: return "#ff0000";
+        case depth > 10: return "#ff4d4d";
+        default: return "#ffe6e6";
     }
 }
 
